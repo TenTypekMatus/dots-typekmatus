@@ -1,3 +1,6 @@
 [submodule ".walls/nordic"]
 	path = .walls/nordic
 	url = https://github.com/linuxdotexe/nordic-wallpapers
+[submodule ".themes/Nordisch"]
+	path = .themes/Nordisch
+	url = https://github.com/EliverLara/Nordic
