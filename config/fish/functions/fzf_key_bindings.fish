@@ -1,0 +1,1 @@
+/home/matus/.fzf/shell/key-bindings.fish
