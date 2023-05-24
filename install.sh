@@ -26,6 +26,8 @@ sudo make install
 cd ../.dmenu || exit
 make -j$(nproc) # dmenu install
 sudo make install
+echo "Installing MtVim"
+git clone https://github.com/TenTypekMatus/MtVim ~/.config/nvim
 echo ">>> Copying the rest"
 cp -r /tmp/dots/config/* ~
 cp /tmp/dots/xinitrc ~
