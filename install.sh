@@ -13,7 +13,7 @@ fi
 echo ">>> Backing up .config"
 cp -r ~/.config ~/.config.bak
 echo ">>> Installing required packages"
-pacman -S --needed xorg-xinit xorg-xsel base-devel papirus-icon-theme alacritty exa fish starship neovim nitrogen --noconfirm
+pacman -S --needed xorg-xinit xorg-xsel base-devel papirus-icon-theme alacritty exa fish starship neovim nitrogen lxsession xfce4-session --noconfirm
 echo ">>> Setting up dotfiles"
 git clone --recurse-submodules https://github.com/TenTypekMatus/dots-typekmatus /tmp/dots 
 cp -r /tmp/dots/{.config,.walls} ~
