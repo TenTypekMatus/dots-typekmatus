@@ -4,3 +4,6 @@
 [submodule ".themes/Nordisch"]
 	path = .themes/Nordisch
 	url = https://github.com/EliverLara/Nordic
+[submodule ".scripts/powermenu"]
+	path = .scripts/powermenu
+	url = https://github.com/jluttine/rofi-power-menu
