@@ -10,7 +10,11 @@ xfce4-session & # polkit backend
 picom -bGF & # compositor
 nitrogen --restore & # wallpaper
 xmodmap -e "pointer = 1 2 3"
-exec dwm
+if [[ ! -f /sys/class/intel_scu_ipc/ ]]; then
+	exec /usr/bin/i3
+else
+	exec /usr/bin/sway
+fi
 
 pipeline() {
 	s="$(nvidia-settings -q CurrentMetaMode -t)"
