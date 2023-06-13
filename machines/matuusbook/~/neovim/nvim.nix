@@ -4,7 +4,7 @@
 
   programs.neovim = {
     enable = true;
-    extraConfig = lib.fileContents ~/.config/nvim/init.vim.nonnixos
+    extraConfig = lib.fileContents /home/matus/.config/nvim/init.vim.nonnixos
     plugins = [
     {
       plugin = vim-plug
