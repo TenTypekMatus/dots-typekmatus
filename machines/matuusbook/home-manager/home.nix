@@ -1,6 +1,9 @@
 { config, pkgs, lib, ... }:
 
 {
+  imports = [
+    ./neovim/nvim.nix
+  ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "matus";
@@ -44,16 +47,6 @@
     userEmail = "Shadiness9530@proton.me";
   };
   wayland.windowManager.sway.enable = true;
-
-programs.neovim = {
-  enable = true;
-  extraConfig = ''
-   set number
-   colorscheme quiet
-  ''; 
-  viAlias = true;
-  vimAlias = true;
-};
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.

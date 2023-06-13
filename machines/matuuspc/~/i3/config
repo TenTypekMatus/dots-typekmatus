@@ -179,7 +179,7 @@ exec_always swaybg -i .walls/wallpapers/ign-0000.png
 
 # Auto lock screen
 # Corner radius
-exec gentoo-pipewire-launcher
+exec pipewire
 
 set $base00 #2e3440
 set $base01 #3b4252
