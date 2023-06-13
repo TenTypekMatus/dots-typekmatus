@@ -37,6 +37,7 @@
     i3blocks
     jetbrains.idea-community
     vlang
+    prismlauncher
 ];
   programs.git = {
     enable = true;
