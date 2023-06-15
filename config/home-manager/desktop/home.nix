@@ -1,9 +1,10 @@
 { config, pkgs, lib, ... }:
 
+imports = [ 
+./spicetify.nix 
+];
+
 {
-  imports = [
-    ./neovim/nvim.nix
-  ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "matus";
@@ -17,13 +18,24 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "23.05"; # Please read the comment before changing.
-
+  nixpkgs.config.allowUnfree = true;
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Agave" ]; })
+    lollypop
+    bat
+    rofi-power-menu
+    obs-studio
+    python311Packages.pynvim
+    xorg.xprop
     lua
+    discord
     alacritty
+    xfce.thunar
+    pavucontrol
+    iw
+    autotiling
     wofi
     swaybg
     swaylock-fancy
@@ -40,13 +52,23 @@
     i3blocks
     jetbrains.idea-community
     vlang
+    prismlauncher
+    rustup
+    gcc
+    gnumake
+    spotify
+    noto-fonts-emoji
 ];
   programs.git = {
     enable = true;
     userName = "Matus Mastena";
     userEmail = "Shadiness9530@proton.me";
   };
-  wayland.windowManager.sway.enable = true;
+
+nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+             "discord"
+             "spotify"
+];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
