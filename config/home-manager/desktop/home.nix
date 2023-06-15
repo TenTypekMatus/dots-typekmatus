@@ -19,16 +19,21 @@ imports =
   # release notes.
   home.stateVersion = "23.05"; # Please read the comment before changing.
   nixpkgs.config.allowUnfree = true;
-  services.flatpak.enable = true;
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Agave" ]; })
-    lollypop
+    # GNOME Extensions
+    gnomeExtensions.material-you-color-theming
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.dash-to-dock
+    gnomeExtensions.appindicator
+    gnomeExtensions.privacy-settings-menu
+    gnomeExtensions.gsconnect
     adw-gtk3
+    # CLI
     github-cli
     bat
-    rofi-power-menu
     obs-studio
     python311Packages.pynvim
     xorg.xprop
@@ -37,22 +42,14 @@ imports =
     alacritty
     xfce.thunar
     pavucontrol
-    iw
     autotiling
     wofi
-    swaybg
-    swaylock-fancy
-    light
     starship
     fish
     exa
     musikcube
     papirus-icon-theme
     nordic
-    picom
-    rofi
-    nitrogen
-    i3blocks
     jetbrains.idea-community
     vlang
     prismlauncher
