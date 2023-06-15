@@ -1,10 +1,10 @@
 { config, pkgs, lib, ... }:
-
-imports = [ 
-./spicetify.nix 
+{
+imports = 
+[ 
 ];
 
-{
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "matus";
@@ -19,11 +19,14 @@ imports = [
   # release notes.
   home.stateVersion = "23.05"; # Please read the comment before changing.
   nixpkgs.config.allowUnfree = true;
+  services.flatpak.enable = true;
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Agave" ]; })
     lollypop
+    adw-gtk3
+    github-cli
     bat
     rofi-power-menu
     obs-studio
