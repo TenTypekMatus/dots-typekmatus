@@ -2,6 +2,7 @@
 {
   imports =
     [
+      ./pkgs.nix
       ./modules/vim.nix
       ./modules/nvim.nix
       ./modules/sway.nix
