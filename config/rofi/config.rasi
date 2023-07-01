@@ -1,0 +1,6 @@
+@theme "nord"
+
+configuration {
+	location: 0;
+	font: "Agave Nerd Font Bold 16";
+}
