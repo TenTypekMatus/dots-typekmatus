@@ -5,7 +5,7 @@ starship init fish | source
 alias ls="exa --icons --git -lhi"
 alias cat="bat"
 alias nvim="hx"
-alias vi="/run/current-system/sw/bin/nvim"
+alias nv="/run/current-system/sw/bin/nvim"
 # Start X at login
 if status is-login
     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
