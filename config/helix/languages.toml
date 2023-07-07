@@ -1,0 +1,15 @@
+[[language]]
+name = "rust"
+auto-format = true
+
+[[language]]
+name = "v"
+auto-format = true
+
+[[grammar]]
+name = "v"
+source = { git = "https://github.com/vlang/vls", subpath = "tree_sitter_v", rev = "66cf9d3086fb5ecc827cb32c64c5d812ab17d2c6" }
+
+[language-server]
+vlang-language-server = { command = "v", args = ["ls"] }
+yaml-language-server = { command = "ansible-lint", args = ["--stdio"] }

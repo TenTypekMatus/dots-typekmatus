@@ -46,7 +46,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
 
 # A more modern dmenu replacement is rofi:
-bindsym $mod+d exec "rofi -modi drun,run -show drun -theme sidebar -show-icons"
+bindsym $mod+d exec "rofi -modi drun,run -show drun -show-icons"
 # bindsym $mod+d exec "wofi --show drun --allow-images --gtk-dark" # copied from sway
 # change focus
 bindsym $mod+h focus left
@@ -197,6 +197,8 @@ set $base0C #88c0d0
 set $base0D #81a1c1
 set $base0E #b48ead
 set $base0F #5e81ac
+smart_borders no_gaps
+force_xinerama yes
 
 # bar {
 # 	status_command /home/matus/.local/bin/bumblebee-status -m time -p time.format="%H:%M" -t nord-powerline
