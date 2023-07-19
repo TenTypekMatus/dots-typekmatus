@@ -8,8 +8,13 @@
     python311Packages.pynvim
     python310Packages.setuptools
     python310Packages.pip
+    helix
+    filezilla
+    xsel
     deluge
     freetube
+    go
+    dep
     ansible
     ansible-lint
     nodejs

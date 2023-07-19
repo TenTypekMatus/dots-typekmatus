@@ -25,11 +25,16 @@
   nixpkgs.config.allowUnfree = true;
   # The home.packages option allows you to install Nix packages into your
   # environment.
-
+  services.betterlockscreen.enable = true;
   programs.git = {
     enable = true;
     userName = "Matus Mastena";
     userEmail = "Shadiness9530@proton.me";
+    extraConfig = {
+      credential.helper = "${
+          pkgs.git.override { withLibsecret = true; }
+        }/bin/git-credential-libsecret";
+      };
   };
   programs.vscode = {
     enable = true;
